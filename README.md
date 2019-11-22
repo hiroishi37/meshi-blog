@@ -1,7 +1,35 @@
-# README
+# meshi-blog DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+|password|string|null: false|
+|area|string|null: false|
+### Association
+  has_many :comments
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|mesis_id|references|null: false, foreign_key: true|
+|text|text|
+|image|string|
+### Association
+  belongs_to :meshis
+  belongs_to :user
+
+## meshisテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|image|string|null: false|
+|area|string|null: false|
+
+### Association
+  has_many :meshis
 
 Things you may want to cover:
 
