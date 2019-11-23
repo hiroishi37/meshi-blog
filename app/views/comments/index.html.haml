@@ -1,0 +1,50 @@
+.wrapper
+  .header
+    .header__box
+      .header__box__content
+        飯ログ
+      .header__box__menu
+        %li.header__box__list
+          北海道・東北
+        %li.header__box__list
+          関東
+        %li.header__box__list
+          中部
+        %li.header__box__list
+          関西
+        %li.header__box__list
+          中国・四国
+        %li.header__box__list
+          九州・沖縄
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'edit',class: 'icon')
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'cog',class: 'icon')
+
+  .contents
+    .contents__text
+      ご飯を食べ歩く事がそこそこ好きです。<br>
+      <br>全国各地の主にラーメン屋の紹介をこの機会に始めます。
+    .contents__menu
+      %li.contents__menu__list
+        麺屋 村上
+      %li.contents__menu__list
+        麺屋 石岡
+      %li.contents__menu__list
+        麺屋 常本
+      %li.contents__menu__list
+        麺屋 鈴木
+      %li.contents__menu__list
+        麺屋 吉武
+  .footer
+    .footer__box
+      .footer__box__form
+        %form
+          %input.footer__box__form__message
+          .footer__box__form__mask
+            %label.ffooter__box__form__mask__image
+              = icon('fa','image',class: 'icon')
+              %input.hidden{type: 'file'}
+          %input.footer__box__form__submit{type: 'submit', value: 'Send'}
