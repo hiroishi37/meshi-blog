@@ -14,22 +14,22 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
-|mesis_id|references|null: false, foreign_key: true|
+|meshi_id|references|null: false, foreign_key: true|
 |text|text|
 |image|string|
 ### Association
-  belongs_to :meshis
+  belongs_to :meshi
   belongs_to :user
 
 ## meshisテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|image|string|null: false|
-|area|string|null: false|
+<!-- |image|string|null: false| -->
+<!-- |area|string|null: false| -->
 
 ### Association
-  has_many :meshis
+  has_many :comments
 
 Things you may want to cover:
 
